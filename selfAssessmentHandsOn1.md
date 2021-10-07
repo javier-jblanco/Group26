@@ -8,10 +8,10 @@ _Choosing a leader and forking his repository of the group_
 - [x] README.md file
 _Names and GitHub users of all the members of the group_
 
-- [ ] CSV directory
+- [x] CSV directory
 _Containing at least one CSV file_
 
-- [ ] Choosing a dataset
+- [x] Choosing a dataset
 
 - [x] datasetRequirements.html
 _Identifies: licenses, entities that can be linked with entities in other datasets and those entities in other datasets that can be linked with entities in the selected dataset_
