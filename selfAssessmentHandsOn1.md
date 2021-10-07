@@ -13,8 +13,8 @@ _Containing at least one CSV file_
 
 - [ ] Choosing a dataset
 
-- [ ] datasetRequirements.html
+- [x] datasetRequirements.html
 _Identifies: licenses, entities that can be linked with entities in other datasets and those entities in other datasets that can be linked with entities in the selected dataset_
 
-- [ ] applicationRequirements.html
+- [x] applicationRequirements.html
 _Includes a description of the application user interface_
