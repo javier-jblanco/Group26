@@ -1,6 +1,7 @@
-## NAMES -	GITHUB USERS of the group members
+**NAMES   |   GITHUB USERS**
 
-+ Javier Jiménez Blanco	-	javier-jblanco
-+ Javier Paniagua Montes	-	javipmontes
-+ Anna Nikolskaya		-	Coffode
-+ Elia Alonso Rueda	-	elia-alonso-rueda
+- Javier Jiménez Blanco   |   javier-jblanco
+- Javier Paniagua Montes    |   javipmontes
+- Anna Nikolskaya   |   Coffode
+- Elia Alonso Rueda   |   elia-alonso-rueda
+
