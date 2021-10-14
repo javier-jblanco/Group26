@@ -1,0 +1,27 @@
+@prefix : <http://HandsOnAirPollution.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+#############################################################
+#         Individuals
+#############################################################
+
+:MeasureID a :Measure;
+    :Units "µg/m3"^^xsd:string ;
+    :01_DayMeasure 0.01^^xsd:float ;
+    :Pollutant "PM10"^^xsd:string ;
+    :Year "2010"^^xsd:string ;
+    :Month "02"^^xsd:string .
+
+:MeasureStationID a :MeasureStation ;
+    :Length 2.15403025^^xsd:float ;
+    :Altitude 41.38530304^^xsd:float ;
+    :Latitude 26^^xsd:float ;
+    :StationType "industrial-rural"^^xsd:string ;
+    :StationName "Barcelona (l'Eixample)"^^xsd:string . 
+
