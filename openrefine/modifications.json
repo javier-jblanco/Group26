@@ -1,0 +1,1176 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODI EOI",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CODI EOI using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ANY",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ANY using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MES using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODI INE",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CODI INE using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MAGNITUD",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MAGNITUD using expression value.toString()"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM ESTACIÓ",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " (",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column NOM ESTACIÓ by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM ESTACIÓ 2",
+    "expression": "grel:substring(value, 0, lastIndexOf(value,\")\"))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOM ESTACIÓ 2 using expression grel:substring(value, 0, lastIndexOf(value,\")\"))"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPUS ESTACIÓ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "background peri-rban (SF)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "background-periurban"
+      }
+    ],
+    "description": "Mass edit cells in column TIPUS ESTACIÓ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPUS ESTACIÓ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "industrial-peri-urban"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "industrial-periurban"
+      }
+    ],
+    "description": "Mass edit cells in column TIPUS ESTACIÓ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPUS ESTACIÓ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "traffic-peri-urban"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "traffic-periurban"
+      }
+    ],
+    "description": "Mass edit cells in column TIPUS ESTACIÓ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPUS ESTACIÓ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "background-peri-urban"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "background-periurban"
+      }
+    ],
+    "description": "Mass edit cells in column TIPUS ESTACIÓ"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPUS ESTACIÓ",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "-",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column TIPUS ESTACIÓ by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOM ESTACIÓ 1",
+    "description": "Remove column NOM ESTACIÓ 1"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MES",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MES using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPUS ESTACIÓ 1",
+    "newColumnName": "Station_Type",
+    "description": "Rename column TIPUS ESTACIÓ 1 to Station_Type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPUS ESTACIÓ 2",
+    "newColumnName": "Station_Environment",
+    "description": "Rename column TIPUS ESTACIÓ 2 to Station_Environment"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOM ESTACIÓ 2",
+    "newColumnName": "Station_Name",
+    "description": "Rename column NOM ESTACIÓ 2 to Station_Name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CODI EOI",
+    "newColumnName": "Station_Code",
+    "description": "Rename column CODI EOI to Station_Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ANY",
+    "newColumnName": "Year",
+    "description": "Rename column ANY to Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MES",
+    "newColumnName": "Month",
+    "description": "Rename column MES to Month"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MAGNITUD",
+    "newColumnName": "Pollutant_Code",
+    "description": "Rename column MAGNITUD to Pollutant_Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOM CONTAMINANT",
+    "newColumnName": "Pollutant_Name",
+    "description": "Rename column NOM CONTAMINANT to Pollutant_Name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UNITATS",
+    "newColumnName": "Units",
+    "description": "Rename column UNITATS to Units"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CODI INE",
+    "newColumnName": "INE_Code",
+    "description": "Rename column CODI INE to INE_Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Station_Code",
+    "newColumnName": "EOI_Code",
+    "description": "Rename column Station_Code to EOI_Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOM MUNICIPI",
+    "newColumnName": "Municipality",
+    "description": "Rename column NOM MUNICIPI to Municipality"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Units",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ug/m3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "µg/m3"
+      }
+    ],
+    "description": "Mass edit cells in column Units"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ALTITUD",
+    "newColumnName": "Altitude",
+    "description": "Rename column ALTITUD to Altitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LATITUD",
+    "newColumnName": "Latitude",
+    "description": "Rename column LATITUD to Latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LONGITUD",
+    "newColumnName": "Longitude",
+    "description": "Rename column LONGITUD to Longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GEOREFERÈNCIA",
+    "newColumnName": "Georeference",
+    "description": "Rename column GEOREFERÈNCIA to Georeference"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ajuntament"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ajuntament"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "av. Del Torrent Gornal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Av. Del Torrent Gornal"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ca n'Oriol"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Can'Oriol"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "can Sant Joan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Can Sant Joan"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "centre de dia Josep Tarradellas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centre de dia Josep Tarradellas"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deixalleria municipal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Deixalleria municipal"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "el Poblenou"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "El Poblenou"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "el Port Vell"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "El Port Vell"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "el Tallapedra"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "El Tallapedra"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "els Monjos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Els Monjos"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "escola bressol"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escola bressol"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "escola de caiac"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escola de caiac"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "escola nàutica"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escola nàutica"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "estadi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Estadi"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hospital comarcal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hospital comarcal"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "jardins de la pau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jardins de la pau"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "l'Eixample"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L'Eixample"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "l'Escardívol"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L'Escardívol"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "la Pineda"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "La Pineda"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "la Ràpita"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "La Ràpita"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "laboratori d'aigües"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Laboratori d'aigües"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "parc de la Ciutat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Parc de la Ciutat"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "parc de la Vall d'Hebron"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Parc de la Vall d'Hebron"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "parc de Sant Francesc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Parc de Sant Francesc"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "passeig dels Molins"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Passeig dels Molins"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pista d'atletisme"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pista d'atletisme"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pl. d'Espanya"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pl. d'Espanya"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pl. Danses de Vilanova"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pl. Danses de Vilanova"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pl. de la Universitat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pl. de la Universitat"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pla del Molí"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pl. del Molí"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "poliesportiu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Poliesportiu"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "repetidor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Repetidor"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "viver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Viver"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "zona esportiva"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Zona esportiva"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Month",
+    "expression": "grel:if(cells[\"Month\"].value.length()==1, \"0\"+cells[\"Month\"].value, cells[\"Month\"].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Month using expression grel:if(cells[\"Month\"].value.length()==1, \"0\"+cells[\"Month\"].value, cells[\"Month\"].value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year using expression value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Month",
+    "expression": "join ([coalesce(cells['Year'].value,''),coalesce(cells['Month'].value,'')],'-')",
+    "onError": "keep-original",
+    "newColumnName": "Year-Month",
+    "columnInsertIndex": 4,
+    "description": "Create column Year-Month at index 4 based on column Month using expression join ([coalesce(cells['Year'].value,''),coalesce(cells['Month'].value,'')],'-')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year-Month",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Year-Month using expression value.toDate()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "background"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Background"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "industrial"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Industrial"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "traffic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Traffic"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Environment",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "periurban"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Periurban"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Environment"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Environment",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "rural"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rural"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Environment"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Environment",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "urban"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Urban"
+      }
+    ],
+    "description": "Mass edit cells in column Station_Environment"
+  }
+]
