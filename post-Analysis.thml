@@ -2,7 +2,7 @@
 <p>There are a total of 32247 instances and 45 attributes described as is mention in the following lines:</p>
 <p><strong>1) EOI_Code:</strong> String code that identifies the measure station.</p>
 <p><strong>2) Station_Name:</strong> String referred to the name of the measure station.</p>
-<p><strong>3) Year.Month:</strong> Year (String value from 2010 to 2021) and Month (String values from 1 to 12) of the measure.</p>
+<p><strong>3) Year-Month:</strong> Year (String value from 2010 to 2021) and Month (String values from 1 to 12) of the measure.</p>
 <p><strong>4) Pollutant_Code:</strong> Numeric code that identifies the contaminant. String values from 9 to 63.</p>
 <p><strong>5) Pollutant_Name:</strong> Contaminant chemical formula.</p>
 <p><strong>6) Units:</strong> Unit of measure.</p>
