@@ -26,7 +26,6 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
 :measuredPollutant rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :hasMeasurement ;
                    rdfs:domain :Measurement ;
                    rdfs:range :Pollutant .
 
