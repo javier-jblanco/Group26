@@ -12,7 +12,8 @@
 #############################################################
 
 :MeasureID a :Measure; #MeasureID is created as {EOI_code}-{YearMonthDay}
-    :measuredPollutant PollutantID^^xsd:string;.
+    :measuredPollutant 10^^xsd:string; #pollutant identifier is the pollutant code
+        :pollutantName Pb^^xsd:string;
     :hasUnits "µg/m3"^^xsd:string ;
     :measuredPollutant PollutantID^^xsd:string;.
     :hasValue 0.01^^xsd:float;
@@ -31,9 +32,3 @@
     :hasLatitude 26^^xsd:float 
     :inMunicipality "Barcelona"^^xsd:string
     :hasINEcode "8054"^^xsd:string .
-
-:PollutantID a :Pollutant
-    :hasName "As"^^xsd:string .
-
-     
-
