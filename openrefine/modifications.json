@@ -65,6 +65,19 @@
     "description": "Text transform on cells in column MAGNITUD using expression value.toString()"
   },
   {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ANY",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ANY using expression value.toNumber()"
+  },
+  {
     "op": "core/column-split",
     "engineConfig": {
       "facets": [],
@@ -1172,5 +1185,256 @@
       }
     ],
     "description": "Mass edit cells in column Station_Environment"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Municipality",
+    "index": 0,
+    "description": "Move column Municipality to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Municipality",
+    "index": 1,
+    "description": "Move column Municipality to position 1"
+  },
+  {
+    "op": "core/transpose-columns-into-rows",
+    "startColumnName": "D01",
+    "columnCount": 31,
+    "ignoreBlankCells": true,
+    "fillDown": false,
+    "separator": null,
+    "keyColumnName": "Day",
+    "valueColumnName": "Values",
+    "description": "Transpose cells in 31 column(s) starting with D01 into rows in two new columns named Day and Values"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Day",
+    "expression": "grel:substring(value,1,lastIndexOf(value,\"\"))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Day using expression grel:substring(value,1,lastIndexOf(value,\"\"))"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 5,
+    "description": "Move column Month to position 5"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 6,
+    "description": "Move column Month to position 6"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 7,
+    "description": "Move column Month to position 7"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 8,
+    "description": "Move column Month to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 9,
+    "description": "Move column Month to position 9"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 10,
+    "description": "Move column Month to position 10"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Month",
+    "index": 11,
+    "description": "Move column Month to position 11"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 4,
+    "description": "Move column Year to position 4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Year-Month",
+    "description": "Remove column Year-Month"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 4,
+    "description": "Move column Year to position 4"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 5,
+    "description": "Move column Year to position 5"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 6,
+    "description": "Move column Year to position 6"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 7,
+    "description": "Move column Year to position 7"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 8,
+    "description": "Move column Year to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Year",
+    "index": 9,
+    "description": "Move column Year to position 9"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "EOI_Code",
+    "description": "Fill down cells in column EOI_Code"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "description": "Fill down cells in column Municipality"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Name",
+    "description": "Fill down cells in column Station_Name"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Pollutant_Code",
+    "description": "Fill down cells in column Pollutant_Code"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Pollutant_Name",
+    "description": "Fill down cells in column Pollutant_Name"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Units",
+    "description": "Fill down cells in column Units"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Type",
+    "description": "Fill down cells in column Station_Type"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Station_Environment",
+    "description": "Fill down cells in column Station_Environment"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "INE_Code",
+    "description": "Fill down cells in column INE_Code"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Year",
+    "description": "Fill down cells in column Year"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Month",
+    "description": "Fill down cells in column Month"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Altitude",
+    "description": "Fill down cells in column Altitude"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude",
+    "description": "Fill down cells in column Latitude"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Longitude",
+    "description": "Fill down cells in column Longitude"
   }
 ]
