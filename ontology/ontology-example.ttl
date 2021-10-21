@@ -11,17 +11,29 @@
 #         Individuals
 #############################################################
 
-:MeasureID a :Measure;
-    :Units "µg/m3"^^xsd:string ;
-    :01_DayMeasure 0.01^^xsd:float ;
-    :Pollutant "PM10"^^xsd:string ;
-    :Year "2010"^^xsd:string ;
-    :Month "02"^^xsd:string .
+:MeasureID a :Measure; #MeasureID is created as {EOI_code}-{YearMonthDay}
+    :measuredPollutant PollutantID^^xsd:string;.
+    :hasUnits "µg/m3"^^xsd:string ;
+    :measuredPollutant PollutantID^^xsd:string;.
+    :hasValue 0.01^^xsd:float;
+    :inDate "01-05-2021"^^xsd:dateType.
 
-:MeasureStationID a :MeasureStation ;
-    :Length 2.15403025^^xsd:float ;
-    :Altitude 41.38530304^^xsd:float ;
-    :Latitude 26^^xsd:float ;
-    :StationType "industrial-rural"^^xsd:string ;
-    :StationName "Barcelona (l'Eixample)"^^xsd:string . 
+:StationID a :Station ; #StationID is the EOI_code
+    :isLocatedIn LocationID^^xsd:string;
+    :hasType "Industrial"^^xsd:string ;
+    :hasEnvironment "Rural"^^xsd:string;
+    :hasName "l'Eixample"^^xsd:string; 
+    :hasMeasurement MeasureID^^xsd:string;
+
+:LocationID a :Location #LocationID is georeference_point
+    :hasLongitude 2.15403025^^xsd:float ;
+    :hasAltitude 41.38530304^^xsd:float ;
+    :hasLatitude 26^^xsd:float 
+    :inMunicipality "Barcelona"^^xsd:string
+    :hasINEcode "8054"^^xsd:string .
+
+:PollutantID a :Pollutant
+    :hasName "As"^^xsd:string .
+
+     
 
