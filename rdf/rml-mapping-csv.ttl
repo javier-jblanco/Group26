@@ -46,6 +46,22 @@
     ]
   ];
 
+  #hasLatitude
+  rr:predicateObjectMap [
+    rr:predicate ex:hasLatitude ;
+    rr:objectMap [
+      rml:reference "Latitude";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
+    ]
+  ];  
+
+  #hasLongitude
+  rr:predicateObjectMap [
+    rr:predicate ex:hasLongitude ;
+    rr:objectMap [
+      rml:reference "Longitude";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
+    ]
+  ];
+  
   #hasEnvironment
   rr:predicateObjectMap [
     rr:predicate [ rr:constant ex:hasEnvironment; rr:tempType rr:IRI ];
@@ -63,21 +79,6 @@
     ]
   ];  
 
-  #hasLatitude
-  rr:predicateObjectMap [
-    rr:predicate ex:hasLatitude ;
-    rr:objectMap [
-      rml:reference "Latitude";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
-    ]
-  ];  
-
-  #hasLongitude
-  rr:predicateObjectMap [
-    rr:predicate ex:hasLongitude ;
-    rr:objectMap [
-      rml:reference "Longitude";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
-    ]
-  ];
 
   #hasName
   rr:predicateObjectMap [
