@@ -14,14 +14,24 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "http://HandsOnAirPollution.org/Station/{EOI_Code}";
+    rr:template "http://www.group26.org/AP/Station/{EOI_Code}";
     rr:termType rr:IRI; rr:class ex:Station
+  ];
+
+  rr:subjectMap [
+    rr:template "http://www.group26.org/AP/Location/{Georreference}";
+    rr:termType rr:IRI; rr:class ex:Location
+  ];
+
+  rr:subjectMap [
+    rr:template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}"; #Don't know if it will work
+    rr:termType rr:IRI; rr:class ex:Measurement
   ];
 
   #Station_Name
   rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:Station_Name; rr:tempType rr:IRI ];
-    #rr:predicate ex:Station_Name;
+    rr:predicate [ rr:constant ex:hasName; rr:tempType rr:IRI ];
+    #rr:predicate ex:hasName;
     rr:objectMap [
       rml:reference "Station_Name";  rr:tempType rr:Literal
     ]
