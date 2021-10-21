@@ -24,12 +24,6 @@
              rdfs:range :Location .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
-:measuredPollutant rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Measurement ;
-                   rdfs:range :Pollutant .
-
-
 #################################################################
 #    Data properties
 #################################################################
@@ -74,8 +68,7 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Pollutant ,
-                     :Station ;
+         rdfs:domain :Station ;
          rdfs:range rdf:XMLLiteral ,
                     rdfs:Literal ,
                     xsd:string .
@@ -117,6 +110,15 @@
                            xsd:string .
 
 
+###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
+:measuredPollutant rdf:type owl:DatatypeProperty .
+
+
+###  http://www.group26.org/AP/ontology/AirPolution#pollutantName
+:pollutantName rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :measuredPollutant .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -127,10 +129,6 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#Measurement
 :Measurement rdf:type owl:Class .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#Pollutant
-:Pollutant rdf:type owl:Class .
 
 
 ###  http://www.group26.org/AP/ontology/AirPolution#Station
