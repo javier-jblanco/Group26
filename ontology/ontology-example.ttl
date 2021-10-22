@@ -11,11 +11,11 @@
 #         Individuals
 #############################################################
 
-:MeasureID a :Measure; #MeasureID is created as {EOI_code}-{YearMonthDay}
-    :measuredPollutant 10^^xsd:string; #pollutant identifier is the pollutant code
+:MeasureID a :Measure; #MeasureID is created as {EOI_code}-{Pollutant_Name}-{Date}
+    :measuredPollutant 10^^xsd:string; 
         :pollutantName Pb^^xsd:string;
     :hasUnits "µg/m3"^^xsd:string ;
-    :measuredPollutant PollutantID^^xsd:string;.
+    :measuredPollutant Pollutant_code^^xsd:string;.
     :hasValue 0.01^^xsd:float;
     :inDate "01-05-2021"^^xsd:dateType.
 
