@@ -1,0 +1,42 @@
+## Queries Checking on the Graph
+
+
+Q1. Classes in the Graph
+SELECT ?c 
+WHERE{
+?c rdf:type rdfs:Class
+} ORDER BY ASC(?c)
+
+Q2. Shows all stations URIs
+SELECT ?station
+WHERE{
+?station rdf:type <http://www.group26.org/AP/ontology/AirPolution#Station> 
+} ORDER BY ASC(?station)
+
+Q3. Describe station Barcelona-L'Eixample
+DESCRIBE ?Station
+WHERE{
+?Station <http://www.group26.org/AP/ontology/AirPolution#hasName> "L'Eixample"
+}
+
+Q4. Show Pollutants and its names in every date in the station of Barcelona-L'Eixample
+SELECT ?Pollutant_Name ?Date
+WHERE{
+?measuredPollutant <http://www.group26.org/AP/ontology/AirPolution#measuredPollutant> <http://www.group26.org/AP/resource/Measurement/{8019043}-{?Pollutant_Name}-{?Date}>.
+} ORDER BY ASC(?Date) 
+
+Q5. 
+DESCRIBE ?Station_Type ?Station_Environment
+WHERE{
+?Station <http://www.group26.org/AP/ontology/AirPolution#hasName> "L'Eixample"
+?Station <http://www.group26.org/AP/ontology/AirPolution#hasType> ?Station_Type
+?Station <http://www.group26.org/AP/ontology/AirPolution#hasEnvironment> ?Station_Environment
+}
+
+#Queries Checking on the linked data from wikidata
+
+Q6.
+DESCRIBE ?Barcelona
+WHERE{
+?Barcelona rdfs:label "Barcelona"
+}
