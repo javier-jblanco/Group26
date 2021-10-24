@@ -1,0 +1,1486 @@
+[
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wdreconcile.toolforge.org/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q11344",
+          "name": "chemical element"
+        },
+        "autoMatch": true,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column Pollutant_Name to type Q11344"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "matched",
+      "match": {
+        "id": "Q708",
+        "name": "lead",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item lead (Q708) for cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "PM10",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"PM10\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "As",
+      "judgment": "matched",
+      "match": {
+        "id": "Q871",
+        "name": "arsenic",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item arsenic (Q871) for cells containing \"As\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Cd",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"Cd\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "C6H6",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"C6H6\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "PM2.5",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"PM2.5\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Ni",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"Ni\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "HCl",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"HCl\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Cl",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"Cl\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wdreconcile.toolforge.org/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q33146843",
+          "name": "municipality of Catalonia"
+        },
+        "autoMatch": true,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column Municipality to type Q33146843"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "matched",
+                  "l": "matched"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Barcelona",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1492",
+        "name": "Barcelona",
+        "types": [
+          "Q33146843",
+          "Q2264924",
+          "Q50330360",
+          "Q51929311",
+          "Q1637706",
+          "Q1549591",
+          "Q515",
+          "Q51929311"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Barcelona (Q1492) for cells containing \"Barcelona\" in column Municipality"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Barcelona",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1492",
+        "name": "Barcelona",
+        "types": [
+          "Q33146843",
+          "Q2264924",
+          "Q50330360",
+          "Q51929311",
+          "Q1637706",
+          "Q1549591",
+          "Q515",
+          "Q51929311"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Barcelona (Q1492) for cells containing \"Barcelona\" in column Municipality"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Vandellòs i l'Hospitalet de l'",
+      "judgment": "matched",
+      "match": {
+        "id": "Q983564",
+        "name": "Vandellòs i l'Hospitalet de l'Infant",
+        "types": [
+          "Q33146843"
+        ],
+        "score": 89
+      },
+      "shareNewTopics": false,
+      "description": "Match item Vandellòs i l'Hospitalet de l'Infant (Q983564) for cells containing \"Vandellòs i l'Hospitalet de l'\" in column Municipality"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Martorell",
+      "judgment": "matched",
+      "match": {
+        "id": "Q15623",
+        "name": "Martorell",
+        "types": [
+          "Q33146843"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Martorell (Q15623) for cells containing \"Martorell\" in column Municipality"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "matched",
+      "match": {
+        "id": "Q708",
+        "name": "lead",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item lead (Q708) for cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "matched",
+      "match": {
+        "id": "Q708",
+        "name": "lead",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item lead (Q708) for cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "PM10",
+      "judgment": "matched",
+      "match": {
+        "id": "Q39389899",
+        "name": "PM10, ozone, and hospital admissions for the elderly in Minneapolis-St. Paul, Minnesota.",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item PM10, ozone, and hospital admissions for the elderly in Minneapolis-St. Paul, Minnesota. (Q39389899) for cells containing \"PM10\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "matched",
+      "match": {
+        "id": "Q415723",
+        "name": "pyrene",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item pyrene (Q415723) for cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Cd",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1091",
+        "name": "cadmium",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item cadmium (Q1091) for cells containing \"Cd\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "C6H6",
+      "judgment": "matched",
+      "match": {
+        "id": "Q2270",
+        "name": "benzene",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item benzene (Q2270) for cells containing \"C6H6\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "PM2.5",
+      "judgment": "matched",
+      "match": {
+        "id": "Q39581258",
+        "name": "PM2.5 chemical source profiles for vehicle exhaust, vegetative burning, geological material, and coal burning in Northwestern Colorado during 1995.",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item PM2.5 chemical source profiles for vehicle exhaust, vegetative burning, geological material, and coal burning in Northwestern Colorado during 1995. (Q39581258) for cells containing \"PM2.5\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Ni",
+      "judgment": "matched",
+      "match": {
+        "id": "Q744",
+        "name": "nickel",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item nickel (Q744) for cells containing \"Ni\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "HCl",
+      "judgment": "matched",
+      "match": {
+        "id": "Q2409",
+        "name": "hydrochloric acid",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item hydrochloric acid (Q2409) for cells containing \"HCl\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Pollutant_Name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Pollutant_Name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "new",
+                  "l": "new"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Cl",
+      "judgment": "matched",
+      "match": {
+        "id": "Q688",
+        "name": "chlorine",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item chlorine (Q688) for cells containing \"Cl\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "(unreconciled)",
+                  "l": "(unreconciled)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "(unreconciled)",
+                  "l": "(unreconciled)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "Pb",
+      "judgment": "matched",
+      "match": {
+        "id": "Q708",
+        "name": "lead",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item lead (Q708) for cells containing \"Pb\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "matched",
+                  "l": "matched"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Barcelona",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1492",
+        "name": "Barcelona",
+        "types": [
+          "Q33146843",
+          "Q2264924",
+          "Q50330360",
+          "Q51929311",
+          "Q1637706",
+          "Q1549591",
+          "Q515",
+          "Q51929311"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Barcelona (Q1492) for cells containing \"Barcelona\" in column Municipality"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "Municipality: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Municipality",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Municipality",
+      "similarValue": "Barcelona",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1492",
+        "name": "Barcelona",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Barcelona (Q1492) for cells containing \"Barcelona\" in column Municipality"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "Year",
+      "expression": "value.toNumber()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Year using expression value.toNumber()"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Station_Environment",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wdreconcile.toolforge.org/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q82794",
+          "name": "geographic region"
+        },
+        "autoMatch": true,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column Station_Environment to type Q82794"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Station_Environment",
+      "similarValue": "Urban",
+      "judgment": "matched",
+      "match": {
+        "id": "Q702492",
+        "name": "urban area",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item urban area (Q702492) for cells containing \"Urban\" in column Station_Environment"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          },
+          {
+            "type": "list",
+            "name": "Station_Environment: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Station_Environment",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Station_Environment",
+      "similarValue": "Periurban",
+      "judgment": "matched",
+      "match": {
+        "id": "Q10950926",
+        "name": "periphery",
+        "types": [
+          "Q82794"
+        ],
+        "score": 78
+      },
+      "shareNewTopics": false,
+      "description": "Match item periphery (Q10950926) for cells containing \"Periurban\" in column Station_Environment"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          },
+          {
+            "type": "list",
+            "name": "Station_Environment: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "Station_Environment",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Station_Environment",
+      "similarValue": "Rural",
+      "judgment": "matched",
+      "match": {
+        "id": "Q175185",
+        "name": "rural area",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item rural area (Q175185) for cells containing \"Rural\" in column Station_Environment"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "Municipality",
+      "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "same_as_wikidata_municipality",
+      "columnInsertIndex": 2,
+      "description": "Create column same_as_wikidata_municipality at index 2 based on column Municipality using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "new",
+      "shareNewTopics": true,
+      "description": "Mark to create one single new item for all cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "matched",
+      "match": {
+        "id": "Q419946",
+        "name": "N6-benzyladenine",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item N6-benzyladenine (Q419946) for cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "Pollutant_Name",
+      "similarValue": "BaP",
+      "judgment": "matched",
+      "match": {
+        "id": "Q419946",
+        "name": "N6-benzyladenine",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item N6-benzyladenine (Q419946) for cells containing \"BaP\" in column Pollutant_Name"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "Pollutant_Name",
+      "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "same_as_wikidata_pollutant_name",
+      "columnInsertIndex": 6,
+      "description": "Create column same_as_wikidata_pollutant_name at index 6 based on column Pollutant_Name using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "Year",
+            "expression": "value",
+            "columnName": "Year",
+            "from": 2021,
+            "to": 2022,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "Station_Environment",
+      "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "same_as_wikidata_station_environment",
+      "columnInsertIndex": 10,
+      "description": "Create column same_as_wikidata_station_environment at index 10 based on column Station_Environment using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+    }
+  ]

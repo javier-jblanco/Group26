@@ -21,7 +21,6 @@
     rr:termType rr:IRI; rr:class ex:Station
   ];  
 
-
   #Station_Name
   rr:predicateObjectMap [
     rr:predicate [ rr:constant ex:hasName; rr:tempType rr:IRI ];
@@ -30,6 +29,93 @@
       rml:reference "Station_Name";  rr:tempType rr:Literal
     ]
   ];
+  
+  #hasEnvironment
+  rr:predicateObjectMap [
+    rr:predicate  ex:hasEnvironment; 
+    #rr:predicate ex:hasEnvironment;
+    rr:objectMap [
+      rml:reference "Station_Environment";  rr:tempType rr:Literal
+    ]
+  ]; 
+
+   #same_as_wikidata_station_environment
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs;
+    rr:objectMap [
+      rml:reference "same_as_wikidata_station_environment";
+      rr:tempType rr:IRI
+    ]
+  ];    
+ 
+  #hasName
+  rr:predicateObjectMap [
+    rr:predicate  ex:hasName;
+    rr:objectMap [
+      rml:reference "Station_Name";  rr:tempType rr:Literal
+    ]
+  ]; 
+
+  #hasType
+  rr:predicateObjectMap [
+    rr:predicate  ex:hasType;
+    rr:objectMap [
+      rml:reference "Station_Type";  rr:tempType rr:Literal
+    ]
+  ].
+
+<#TriplesMap2> a rr:TriplesMap;
+#<#TriplesMap2>
+  rml:logicalSource [
+    rml:source "./data/AirQuality-updated2.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+
+ 
+  rr:subjectMap [
+    rr:template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}";
+    rr:termType rr:IRI; rr:class ex:Measurement
+  ] ;
+
+  #hasUnits
+  rr:predicateObjectMap [
+    rr:predicate ex:hasUnits;
+    rr:objectMap [
+      rml:reference "Units";  rr:tempType rr:Literal
+    ]
+  ]; 
+
+  #hasValue
+  rr:predicateObjectMap [
+    rr:predicate ex:hasValue ;
+    rr:objectMap [
+      rml:reference "Values";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
+    ]
+  ]; 
+
+  #inDate
+  rr:predicateObjectMap [
+    rr:predicate ex:inDate ;
+    rr:objectMap [
+      rml:reference "Date";  rr:datatype <http://www.w3.org/2001/XMLSchema#dateTime>
+    ]
+  ].    
+
+
+<#TriplesMap3> a rr:TriplesMap;
+
+#<#TriplesMap3>
+  rml:logicalSource [
+    rml:source "./data/AirQuality-updated2.csv" ;
+    rml:referenceFormulation ql:CSV;
+    rr:Template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}"
+  ];
+
+ 
+  rr:subjectMap [
+    rr:template "http://www.group26.org/AP/Location/{Longitude}-{Latitude}";
+    rr:termType rr:IRI; rr:class ex:Location
+  ] ;
 
   #hasAltitude
   rr:predicateObjectMap [
@@ -54,77 +140,10 @@
       rml:reference "Longitude";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
     ]
   ];
-  
-  #hasEnvironment
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:hasEnvironment; rr:tempType rr:IRI ];
-    #rr:predicate ex:hasEnvironment;
-    rr:objectMap [
-      rml:reference "Station_Environment";  rr:tempType rr:Literal
-    ]
-  ]; 
-
-   #same_as_wikidata_station_environment
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant owl:sameAs; rr:tempType rr:IRI ];
-    rr:objectMap [
-      rml:reference "same_as_wikidata_station_environment";
-      rr:tempType rr:IRI
-    ]
-  ];    
-
-  #hasINECode
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:hasINECode; rr:tempType rr:IRI ];
-    rr:objectMap [
-      rml:reference "INE_Code";  rr:tempType rr:Literal
-    ]
-  ];  
-
-
-  #hasName
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:hasName; rr:tempType rr:IRI ];
-    rr:objectMap [
-      rml:reference "Station_Name";  rr:tempType rr:Literal
-    ]
-  ]; 
-
-  #hasType
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:hasType; rr:tempType rr:IRI ];
-    rr:objectMap [
-      rml:reference "Station_Type";  rr:tempType rr:Literal
-    ]
-  ]; 
-
-  #hasUnits
-  rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:hasUnits; rr:tempType rr:IRI ];
-    rr:objectMap [
-      rml:reference "Units";  rr:tempType rr:Literal
-    ]
-  ]; 
-
-  #hasValue
-  rr:predicateObjectMap [
-    rr:predicate ex:hasValue ;
-    rr:objectMap [
-      rml:reference "Values";  rr:datatype <http://www.w3.org/2001/XMLSchema#float>
-    ]
-  ];  
-
-  #inDate
-  rr:predicateObjectMap [
-    rr:predicate ex:inDate ;
-    rr:objectMap [
-      rml:reference "Date";  rr:datatype <http://www.w3.org/2001/XMLSchema#dateTime>
-    ]
-  ];
 
   #inMunicipality
   rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:inMunicipality; rr:tempType rr:IRI ];
+    rr:predicate ex:inMunicipality; 
     rr:objectMap [
       rml:reference "Municipality";  rr:tempType rr:Literal
     ]
@@ -132,11 +151,20 @@
 
   #same_as_wikidata_municipality
   rr:predicateObjectMap [
-    rr:predicate [ rr:constant owl:sameAs; rr:tempType rr:IRI ];
+    rr:predicate owl:sameAs;
     rr:objectMap [
       rml:reference "same_as_wikidata_municipality"; rr:tempType rr:IRI
     ]
   ]; 
+
+  #hasINECode
+  rr:predicateObjectMap [
+    rr:predicate [ rr:constant ex:hasINECode; rr:tempType rr:IRI ];
+    rr:objectMap [
+      rml:reference "INE_Code";  rr:tempType rr:Literal
+    ]
+  ];
+  
 
   #measuredPollutant
   rr:predicateObjectMap [
@@ -148,7 +176,7 @@
   
   #pollutantName
   rr:predicateObjectMap [
-    rr:predicate [ rr:constant ex:pollutantName; rr:tempType rr:IRI ];
+    rr:predicate ex:pollutantName;
     rr:objectMap [
       rml:reference "Pollutant_Name";  rr:tempType rr:Literal
     ]
@@ -156,11 +184,9 @@
 
    #same_as_wikidata_pollutant_name
   rr:predicateObjectMap [
-    rr:predicate [ rr:constant owl:sameAs; rr:tempType rr:IRI ];
+    rr:predicate  owl:sameAs;
     rr:objectMap [
       rml:reference "same_as_wikidata_pollutant_name";
       rr:tempType rr:IRI
     ]
-  ]. 
-
- #Georeference   
+  ].       
