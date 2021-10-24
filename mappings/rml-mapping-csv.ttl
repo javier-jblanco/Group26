@@ -11,7 +11,7 @@
 <#TriplesMap1> a rr:TriplesMap;
 #<#TriplesMap1>
   rml:logicalSource [
-    rml:source "./data/AirQuality-updated-5000rows-with-links" ;
+    rml:source "./data/AirQuality-updated.csv" ;
     rml:referenceFormulation ql:CSV 
   ];
 
@@ -67,7 +67,7 @@
 <#TriplesMap2> a rr:TriplesMap;
 #<#TriplesMap2>
   rml:logicalSource [
-    rml:source "./data/AirQuality-updated2.csv" ;
+    rml:source "./data/AirQuality-updated.csv" ;
     rml:referenceFormulation ql:CSV 
   ];
 
@@ -106,7 +106,7 @@
 
 #<#TriplesMap3>
   rml:logicalSource [
-    rml:source "./data/AirQuality-updated2.csv" ;
+    rml:source "./data/AirQuality-updated.csv" ;
     rml:referenceFormulation ql:CSV;
     rr:Template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}"
   ];
