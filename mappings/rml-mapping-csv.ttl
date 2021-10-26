@@ -30,6 +30,24 @@
     ]
   ];
   
+  #Station_Location
+  rr:predicateObjectMap [
+    rr:predicate [ rr:constant ex:isLocatedIn; rr:tempType rr:IRI ];
+    #rr:predicate ex:isLocatedIn;
+    rr:objectMap [
+      rr:template "http://www.group26.org/AP/Location/{Longitude}-{Latitude}"; rr:termType rr:IRI
+    ]
+  ];
+
+  #Station_Measurement
+  rr:predicateObjectMap [
+    rr:predicate [ rr:constant ex:hasMeasurement; rr:tempType rr:IRI ];
+    #rr:predicate ex:hasMeasurement;
+    rr:objectMap [
+      rr:Template "http://www.group26.org/AP/Measurement/{EOI_Code}-{Pollutant_Code}-{Date}";  rr:tempType rr:IRI
+    ]
+  ];
+
   #hasEnvironment
   rr:predicateObjectMap [
     rr:predicate  ex:hasEnvironment; 
@@ -108,7 +126,6 @@
   rml:logicalSource [
     rml:source "./data/AirQuality-updated.csv" ;
     rml:referenceFormulation ql:CSV;
-    rr:Template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}"
   ];
 
  
