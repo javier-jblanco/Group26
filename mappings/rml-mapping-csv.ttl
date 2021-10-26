@@ -73,7 +73,7 @@
 
  
   rr:subjectMap [
-    rr:template "http://www.group26.org/AP/Measurement/{Pollutant_Name}-{Date}";
+    rr:template "http://www.group26.org/AP/Measurement/{EOI_Code}-{Pollutant_Code}-{Date}";
     rr:termType rr:IRI; rr:class ex:Measurement
   ] ;
 
