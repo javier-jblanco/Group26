@@ -11,24 +11,37 @@
 #         Individuals
 #############################################################
 
-:MeasureID a :Measure; #MeasureID is created as {EOI_code}-{Pollutant_Name}-{Date}
-    :measuredPollutant 10^^xsd:string; 
-        :pollutantName Pb^^xsd:string;
-    :hasUnits "µg/m3"^^xsd:string ;
-    :measuredPollutant Pollutant_code^^xsd:string;.
+:MeasureID a :Measure; #MeasureID is an URI created with {EOI_code}-{Pollutant_Name}-{Date}
+    :measuredPollutant PollutantID^^xsd:string;
+    :hasUnits "µg/m3"^^xsd:string;
     :hasValue 0.01^^xsd:float;
     :inDate "01-05-2021"^^xsd:dateType.
 
-:StationID a :Station ; #StationID is the EOI_code
+:StationID a :Station ; #StationID is an URI created from the {EOI_code}
     :isLocatedIn LocationID^^xsd:string;
-    :hasType "Industrial"^^xsd:string ;
-    :hasEnvironment "Rural"^^xsd:string;
-    :hasName "l'Eixample"^^xsd:string; 
     :hasMeasurement MeasureID^^xsd:string;
+    :hasEnvironment EnvironmentID^^xsd:string;
+    :hasType "Industrial"^^xsd:string;
+    :hasCode "8019435"^^xsd:string;
+    :hasName "l'Eixample"^^xsd:string.
 
-:LocationID a :Location #LocationID is georeference_point
+
+:LocationID a :Location #LocationID is an URI created with the {georeference_point}
+    :inMunicipality MunicipalityID^^xsd:string ;
     :hasLongitude 2.15403025^^xsd:float ;
     :hasAltitude 41.38530304^^xsd:float ;
-    :hasLatitude 26^^xsd:float 
-    :inMunicipality "Barcelona"^^xsd:string
-    :hasINEcode "8054"^^xsd:string .
+    :hasLatitude 26^^xsd:float .
+
+:PollutantID a :Pollutant #PollutantID is an URI created with the {Pollutant_Code} 
+    :sameAs "https://wikidata.org/entity/Q13460"^^xsd:string ;
+    :hasName "Pb"^^xsd:string ;
+    :hasCode "10"^^xsd:string .
+
+:MunicipalityID a :Municipality #MunicipalityID is an URI created with the {INE_Code} 
+    :sameAs "https://wikidata.org/entity/Q13460"^^xsd:string ;
+    :hasName "Pl. Espanya"^^xsd:string ;
+    :hasCode "8019"^^xsd:string .
+
+:EnvironmentID a :Environment #EnvironmentID is an URI created with the {Station_Environment} 
+    :sameAs "https://wikidata.org/entity/Q13460"^^xsd:string ;
+    :hastype "Urban"^^xsd:string .
