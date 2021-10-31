@@ -12,16 +12,34 @@
 #    Object Properties
 #################################################################
 
+###  http://www.group26.org/AP/ontology/AirPolution#hasEnvironment
+:hasEnvironment rdf:type owl:ObjectProperty ;
+                rdfs:domain :Station ;
+                rdfs:range :Environment .
+
+
 ###  http://www.group26.org/AP/ontology/AirPolution#hasMeasurement
 :hasMeasurement rdf:type owl:ObjectProperty ;
                 rdfs:domain :Station ;
                 rdfs:range :Measurement .
 
 
+###  http://www.group26.org/AP/ontology/AirPolution#inMunicipality
+:inMunicipality rdf:type owl:ObjectProperty ;
+                rdfs:domain :Location ;
+                rdfs:range :Municipality .
+
+
 ###  http://www.group26.org/AP/ontology/AirPolution#isLocatedIn
 :isLocatedIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Station ;
              rdfs:range :Location .
+
+
+###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
+:measuredPollutant rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Measurement ;
+                   rdfs:range :Pollutant .
 
 
 #################################################################
@@ -34,20 +52,21 @@
              rdfs:range xsd:float .
 
 
+###  http://www.group26.org/AP/ontology/AirPolution#hasCode
+:hasCode rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Municipality ,
+                     :Station ;
+         rdfs:range rdf:XMLLiteral ,
+                    rdfs:Literal ,
+                    xsd:string .
+
+
 ###  http://www.group26.org/AP/ontology/AirPolution#hasEnvironment
 :hasEnvironment rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Station ;
                 rdfs:range rdf:XMLLiteral ,
                            rdfs:Literal ,
                            xsd:string .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#hasINECode
-:hasINECode rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Location ;
-            rdfs:range rdf:XMLLiteral ,
-                       rdfs:Literal ,
-                       xsd:string .
 
 
 ###  http://www.group26.org/AP/ontology/AirPolution#hasLatitude
@@ -68,7 +87,8 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Station ;
+         rdfs:domain :Pollutant ,
+                     :Station ;
          rdfs:range rdf:XMLLiteral ,
                     rdfs:Literal ,
                     xsd:string .
@@ -76,7 +96,8 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#hasType
 :hasType rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Station ;
+         rdfs:domain :Environment ,
+                     :Station ;
          rdfs:range rdf:XMLLiteral ,
                     rdfs:Literal ,
                     xsd:string .
@@ -102,26 +123,21 @@
         rdfs:range xsd:dateTime .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#inMunicipality
-:inMunicipality rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Location ;
-                rdfs:range rdf:XMLLiteral ,
-                           rdfs:Literal ,
-                           xsd:string .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
-:measuredPollutant rdf:type owl:DatatypeProperty .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#pollutantName
-:pollutantName rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :measuredPollutant .
+###  http://www.group26.org/AP/ontology/AirPolution#sameAs
+:sameAs rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Environment ,
+                    :Municipality ,
+                    :Pollutant ;
+        rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.group26.org/AP/ontology/AirPolution#Environment
+:Environment rdf:type owl:Class .
+
 
 ###  http://www.group26.org/AP/ontology/AirPolution#Location
 :Location rdf:type owl:Class .
@@ -129,6 +145,14 @@
 
 ###  http://www.group26.org/AP/ontology/AirPolution#Measurement
 :Measurement rdf:type owl:Class .
+
+
+###  http://www.group26.org/AP/ontology/AirPolution#Municipality
+:Municipality rdf:type owl:Class .
+
+
+###  http://www.group26.org/AP/ontology/AirPolution#Pollutant
+:Pollutant rdf:type owl:Class .
 
 
 ###  http://www.group26.org/AP/ontology/AirPolution#Station
