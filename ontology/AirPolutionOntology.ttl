@@ -1,4 +1,4 @@
-@prefix : <http://www.group26.org/AP/ontology/AirPolution#> .
+@prefix g26: <http://www.group26.org/AP/ontology/AirPolution#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -24,8 +24,8 @@
                 rdfs:range :Measurement .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#inMunicipality
-:inMunicipality rdf:type owl:ObjectProperty ;
+###  http://www.group26.org/AP/ontology/AirPolution#hasMunicipality
+:hasMunicipality rdf:type owl:ObjectProperty ;
                 rdfs:domain :Location ;
                 rdfs:range :Municipality .
 
@@ -36,8 +36,8 @@
              rdfs:range :Location .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#measuredPollutant
-:measuredPollutant rdf:type owl:ObjectProperty ;
+###  http://www.group26.org/AP/ontology/AirPolution#hasPollutant
+:hasPollutant rdf:type owl:ObjectProperty ;
                    rdfs:domain :Measurement ;
                    rdfs:range :Pollutant .
 
