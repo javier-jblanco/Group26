@@ -151,7 +151,7 @@
   rr:predicateObjectMap [
         rr:predicate g26:hasValue ;
         rr:objectMap [
-        rml:reference "Values";
+        rml:reference "Values"; rr:datatype <http://www.w3.org/2001/XMLSchema#float>
         ]
   ];   
   #hasUnits
