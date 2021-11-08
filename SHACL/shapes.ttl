@@ -1,0 +1,150 @@
+@prefix :      <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix g26:   <http://www.group26.org/AP/ontology/AirPolution#> .
+
+<https://astrea.linkeddata.es/shapes#c0970294b1e5dd4d13a630d0d2777929>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasLatitude ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#67a496c6f0a73fdfc4afb44406d435b9>
+        a            sh:PropertyShape ;
+        sh:class     :Pollutant ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      :hasPollutant .
+
+<https://astrea.linkeddata.es/shapes#2fe82a01073dcf36bde6efe701f335ff>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasType ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#2e60c9f5fb031f59e192a7fd7be8778a>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasName ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#27897e23a2aa0cbf8a889758ee4de5ea>
+        a            sh:PropertyShape ;
+        sh:class     xsd:string , :Environment ;
+        sh:datatype  xsd:string , :Environment ;
+        sh:nodeKind  sh:Literal , sh:BlankNodeOrIRI ;
+        sh:path      :hasEnvironment ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#fe21bddae9c4fd89135d73fe71da7a99>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Environment .
+
+<https://astrea.linkeddata.es/shapes#09d3c99d8b7cb29f0fb78b057c44d1d4>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#01384258babe5f3cc052fd7decad614f> , <https://astrea.linkeddata.es/shapes#23ec1807f6b23c92a117dc8fdf854382> , <https://astrea.linkeddata.es/shapes#c0970294b1e5dd4d13a630d0d2777929> , <https://astrea.linkeddata.es/shapes#21d73e3d15987d3807349b67e8a4e708> ;
+        sh:targetClass  :Location .
+
+<https://astrea.linkeddata.es/shapes#01384258babe5f3cc052fd7decad614f>
+        a            sh:PropertyShape ;
+        sh:class     :Municipality ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      :hasMunicipality .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#fcaa325bf567f1cf9978739e29983700> , <https://astrea.linkeddata.es/shapes#23ec1807f6b23c92a117dc8fdf854382> , <https://astrea.linkeddata.es/shapes#2e60c9f5fb031f59e192a7fd7be8778a> , <https://astrea.linkeddata.es/shapes#cb4dfd3260f692e6d10c1cdfadba9fe5> , <https://astrea.linkeddata.es/shapes#27897e23a2aa0cbf8a889758ee4de5ea> , <https://astrea.linkeddata.es/shapes#03d658a8148cb48ce9edf53d55719562> , <https://astrea.linkeddata.es/shapes#31a5c70bbfac247f7553d833e876ea7e> , <https://astrea.linkeddata.es/shapes#67a496c6f0a73fdfc4afb44406d435b9> , <https://astrea.linkeddata.es/shapes#09d3c99d8b7cb29f0fb78b057c44d1d4> , <https://astrea.linkeddata.es/shapes#3eecf15c26b04a6533fe9749b998c512> , <https://astrea.linkeddata.es/shapes#81f4710d1a981e735c4230ba83a536fd> , <https://astrea.linkeddata.es/shapes#149cbe5df484becfc280815055e6b823> , <https://astrea.linkeddata.es/shapes#2fe82a01073dcf36bde6efe701f335ff> , <https://astrea.linkeddata.es/shapes#5d4d90eefc9d2691d2c01cf7b570fe87> , <https://astrea.linkeddata.es/shapes#d405c0dcae58a45a154be63dc051402e> , <https://astrea.linkeddata.es/shapes#21d73e3d15987d3807349b67e8a4e708> , <https://astrea.linkeddata.es/shapes#c0970294b1e5dd4d13a630d0d2777929> , <https://astrea.linkeddata.es/shapes#fe21bddae9c4fd89135d73fe71da7a99> , <https://astrea.linkeddata.es/shapes#3e9def471e3d05941e691f6c69decde5> , <https://astrea.linkeddata.es/shapes#01384258babe5f3cc052fd7decad614f> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0620946147> .
+
+<https://astrea.linkeddata.es/shapes#cb4dfd3260f692e6d10c1cdfadba9fe5>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#81f4710d1a981e735c4230ba83a536fd> , <https://astrea.linkeddata.es/shapes#03d658a8148cb48ce9edf53d55719562> , <https://astrea.linkeddata.es/shapes#27897e23a2aa0cbf8a889758ee4de5ea> ;
+        sh:targetClass  :Station .
+
+<https://astrea.linkeddata.es/shapes#3e9def471e3d05941e691f6c69decde5>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Municipality .
+
+<https://astrea.linkeddata.es/shapes#03d658a8148cb48ce9edf53d55719562>
+        a            sh:PropertyShape ;
+        sh:class     :Measurement ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      :hasMeasurement .
+
+<https://astrea.linkeddata.es/shapes#fcaa325bf567f1cf9978739e29983700>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:float ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasValue ;
+        sh:pattern   "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#81f4710d1a981e735c4230ba83a536fd>
+        a            sh:PropertyShape ;
+        sh:class     :Location ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      :isLocatedIn .
+
+<https://astrea.linkeddata.es/shapes#5d4d90eefc9d2691d2c01cf7b570fe87>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasUnits ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#31a5c70bbfac247f7553d833e876ea7e>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Pollutant .
+
+<https://astrea.linkeddata.es/report/0620946147>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#23ec1807f6b23c92a117dc8fdf854382>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:float ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasAltitude ;
+        sh:pattern   "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#3eecf15c26b04a6533fe9749b998c512>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#67a496c6f0a73fdfc4afb44406d435b9> , <https://astrea.linkeddata.es/shapes#5d4d90eefc9d2691d2c01cf7b570fe87> , <https://astrea.linkeddata.es/shapes#fcaa325bf567f1cf9978739e29983700> , <https://astrea.linkeddata.es/shapes#d405c0dcae58a45a154be63dc051402e> ;
+        sh:targetClass  :Measurement .
+
+<https://astrea.linkeddata.es/shapes#21d73e3d15987d3807349b67e8a4e708>
+        a            sh:PropertyShape ;
+        sh:datatype  rdfs:Literal ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasLongitude .
+
+<https://astrea.linkeddata.es/shapes#149cbe5df484becfc280815055e6b823>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :hasCode ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#d405c0dcae58a45a154be63dc051402e>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      :inDate ;
+        sh:pattern   "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .

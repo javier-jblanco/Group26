@@ -1,161 +1,133 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix g26: <http://www.group26.org/AP/ontology/AirPolution#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.group26.org/AP/ontology/AirPolution> .
+@base <http://www.group26.org/AP/ontology/AirPolution#> .
 
-<http://www.group26.org/AP/ontology/AirPolution> rdf:type owl:Ontology .
+<http://www.group26.org/AP/ontology/AirPolution#> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasEnvironment
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasEnvironment
 :hasEnvironment rdf:type owl:ObjectProperty ;
                 rdfs:domain :Station ;
                 rdfs:range :Environment .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasMeasurement
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasMeasurement
 :hasMeasurement rdf:type owl:ObjectProperty ;
                 rdfs:domain :Station ;
                 rdfs:range :Measurement .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasMunicipality
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasMunicipality
 :hasMunicipality rdf:type owl:ObjectProperty ;
-                rdfs:domain :Location ;
-                rdfs:range :Municipality .
+                 rdfs:domain :Location ;
+                 rdfs:range :Municipality .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#isLocatedIn
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasPollutant
+:hasPollutant rdf:type owl:ObjectProperty ;
+              rdfs:domain :Measurement ;
+              rdfs:range :Pollutant .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#isLocatedIn
 :isLocatedIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Station ;
              rdfs:range :Location .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#hasPollutant
-:hasPollutant rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Measurement ;
-                   rdfs:range :Pollutant .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasAltitude
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasAltitude
 :hasAltitude rdf:type owl:DatatypeProperty ;
              rdfs:domain :Location ;
              rdfs:range xsd:float .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasCode
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasCode
 :hasCode rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Municipality ,
-                     :Station ;
-         rdfs:range rdf:XMLLiteral ,
-                    rdfs:Literal ,
-                    xsd:string .
+         rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasEnvironment
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasEnvironment
 :hasEnvironment rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Station ;
-                rdfs:range rdf:XMLLiteral ,
-                           rdfs:Literal ,
-                           xsd:string .
+                rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasLatitude
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasLatitude
 :hasLatitude rdf:type owl:DatatypeProperty ;
              rdfs:domain :Location ;
-             rdfs:range rdf:XMLLiteral ,
-                        rdfs:Literal ,
-                        xsd:string .
+             rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasLongitude
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasLongitude
 :hasLongitude rdf:type owl:DatatypeProperty ;
               rdfs:domain :Location ;
-              rdfs:range rdf:XMLLiteral ,
-                         rdfs:Literal ,
-                         xsd:string .
+              rdfs:range rdfs:Literal .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasName
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Pollutant ,
-                     :Station ;
-         rdfs:range rdf:XMLLiteral ,
-                    rdfs:Literal ,
-                    xsd:string .
+         rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasType
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasType
 :hasType rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Environment ,
-                     :Station ;
-         rdfs:range rdf:XMLLiteral ,
-                    rdfs:Literal ,
-                    xsd:string .
+         rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasUnits
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasUnits
 :hasUnits rdf:type owl:DatatypeProperty ;
           rdfs:domain :Measurement ;
-          rdfs:range rdf:XMLLiteral ,
-                     rdfs:Literal ,
-                     xsd:string .
+          rdfs:range xsd:string .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#hasValue
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasValue
 :hasValue rdf:type owl:DatatypeProperty ;
           rdfs:domain :Measurement ;
           rdfs:range xsd:float .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#inDate
+###  http://www.semanticweb.org/owl/owlapi/turtle#inDate
 :inDate rdf:type owl:DatatypeProperty ;
         rdfs:domain :Measurement ;
         rdfs:range xsd:dateTime .
-
-
-###  http://www.group26.org/AP/ontology/AirPolution#sameAs
-:sameAs rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Environment ,
-                    :Municipality ,
-                    :Pollutant ;
-        rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.group26.org/AP/ontology/AirPolution#Environment
+###  http://www.semanticweb.org/owl/owlapi/turtle#Environment
 :Environment rdf:type owl:Class .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#Location
+###  http://www.semanticweb.org/owl/owlapi/turtle#Location
 :Location rdf:type owl:Class .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#Measurement
+###  http://www.semanticweb.org/owl/owlapi/turtle#Measurement
 :Measurement rdf:type owl:Class .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#Municipality
+###  http://www.semanticweb.org/owl/owlapi/turtle#Municipality
 :Municipality rdf:type owl:Class .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#Pollutant
+###  http://www.semanticweb.org/owl/owlapi/turtle#Pollutant
 :Pollutant rdf:type owl:Class .
 
 
-###  http://www.group26.org/AP/ontology/AirPolution#Station
+###  http://www.semanticweb.org/owl/owlapi/turtle#Station
 :Station rdf:type owl:Class .
 
 
