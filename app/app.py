@@ -61,7 +61,7 @@ q_wiki=prepareQuery('''
   initNs = {"base": base, "owl": owl}
 )
 
-#TODO
+
 wiki_link=[]
 for c in municipalities_selection:
     for r in g.query(q_wiki, initBindings = {'municipality_name': Literal(c, datatype="http://www.w3.org/2001/XMLSchema#string")}):
